@@ -50,13 +50,13 @@ Basic create:
 python3 scaleway.py create --name "test"
 ```
 Deploys an instance with:
-    - name: `test`
-    - image: `ubuntu_focal`
-    - flavor: `DEV1-S`
-    - tags: `[]`
-    - zone: `fr-par-1`  
-    - region: `fr-par`
-    - ssh-key: `~/.ssh/id_rsa.pub`
-    - playbook: `playbook.yml`
-    - overwrite: `False`
-    - verbose: `False`
+- name: `test`
+- image: `ubuntu_focal`
+- flavor: `DEV1-S`
+- tags: `[]`
+- zone: `fr-par-1`  
+- region: `fr-par`
+- ssh-key: `~/.ssh/id_rsa.pub`
+- playbook: `playbook.yml`
+- overwrite: `False`
+- verbose: `False`
