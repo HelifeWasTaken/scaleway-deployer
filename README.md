@@ -29,3 +29,34 @@ options:
                         Overwrite existing VM
   --verbose VERBOSE     Verbose mode
 ```
+
+## Requirements:
+- python3
+- ansible
+- terraform
+
+Thoses environments variables must be set:
+```
+export SCW_ACCESS_KEY='xxx' # https://console.scaleway.com/iam/api-keys
+export SCW_SECRET_KEY='xxx' # https://console.scaleway.com/iam/api-keys
+export SCW_DEFAULT_ORGANIZATION_ID='xxx' # https://console.scaleway.com/organization/settings
+export SCW_DEFAULT_PROJECT_ID='xxx' # https://console.scaleway.com/project/settings
+```
+
+## Example:
+
+Basic create:
+```bash
+python3 scaleway.py create --name "test"
+```
+Deploys an instance with:
+    - name: `test`
+    - image: `ubuntu_focal`
+    - flavor: `DEV1-S`
+    - tags: `[]`
+    - zone: `fr-par-1`  
+    - region: `fr-par`
+    - ssh-key: `~/.ssh/id_rsa.pub`
+    - playbook: `playbook.yml`
+    - overwrite: `False`
+    - verbose: `False`
